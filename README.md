@@ -4,13 +4,15 @@ Built multiple predictive models using healthcare data
 
 # How to run flask app
 
-1. Click on the "dist" folder.
+1. Download the "dist" folder
 
-2. Click on "server".
+2. Click on the "dist" folder.
 
-3. A cmd window opens, where the last line is "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
+3. Click on "server".
 
-4. Copy the link and paste it on a browser.
+4. A cmd window opens, where the last line is "Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)"
+
+5. Copy the link and paste it on a browser.
 
 # Description
 
