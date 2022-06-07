@@ -1,0 +1,39 @@
+<style>
+table
+{
+padding: 1px; 
+border-collapse: collapse;
+text-align:center;
+font-size:18px;
+margin-right:40px;
+margin-top:80px;
+float:right;
+} 
+tr:hover 
+{
+background-color:#F5F5F5;
+} 
+tr:nth-child(even) 
+{
+background-color: cornsilk;
+} 
+th{ 
+background-color: bisque; 
+color: black;
+}
+</style>
+<body>
+<img src="{{ url_for('static', filename='finalconfusionmatrix.png') }}" style="float: left; width: 50%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="{{ url_for('static', filename='finalcalibration.png') }}" style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
+<table border="1"><tr><th>Accuracy score</th><th>F1 score</th><th>Precision score</th><th>Recall score</th><th>Time complexity</th></tr>
+<tr><th colspan="5">1. CALIBRATED RANDOM FOREST</th><tr>
+<tr><td bgcolor="green">77.17%</td><td bgcolor="green">77.05%</td><td bgcolor="green">77.50%</td><td bgcolor="green">77.07%</td><td bgcolor="green">1.526 sec</td></tr>
+<tr><th colspan="5">2. CALIBRATED DECISION TREE</th><tr>
+<tr><td>69.93%</td><td>69.76%</td><td>70.64%</td><td>70.07%</td><td>0.107 sec</td></tr>
+<tr><th colspan="5">3. CALIBRATED GRADIENT BOOSTING</th><tr>
+<tr><td>68.48%</td><td>68.48%</td><td>68.48%</td><td>68.48%</td><td>3.180 sec</td></tr>
+<tr><th colspan="5">4. ENSEMBLE OF TREES</th><tr>
+<tr><td>75.31%</td><td>75.31%</td><td>75.34%</td><td>75.33%</td><td>7.174 sec</td></tr>
+</table>
+<p style="clear: both;">
+</body>

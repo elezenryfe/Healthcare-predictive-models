@@ -1,0 +1,37 @@
+<style>
+table
+{
+padding: 1px; 
+border-collapse: collapse;
+text-align:center;
+font-size:18px;
+margin-right:40px;
+margin-top:80px;
+float:right;
+} 
+tr:hover 
+{
+background-color:#F5F5F5;
+} 
+tr:nth-child(even) 
+{
+background-color: cornsilk;
+} 
+th{ 
+background-color: bisque; 
+color: black;
+}
+</style>
+<body>
+<img src="{{ url_for('static', filename='confusionmatrixmulti2.png') }}" style="float: left; width: 50%; margin-right: 1%; margin-bottom: 0.5em;">
+<img src="{{ url_for('static', filename='modelonegraph.png') }}" style="float: left; width: 48%; margin-right: 1%; margin-bottom: 0.5em;">
+<table border="1"><tr><th>Accuracy score</th><th>F1 score</th><th>Precision score</th><th>Recall score</th><th>Time complexity</th></tr>
+<tr><th colspan="5">1. RANDOM FOREST</th><tr>
+<tr><td>80.34%</td><td>79.78%</td><td>79.44%</td><td>79.74%</td><td>0.722 sec</td></tr>
+<tr><th colspan="5">2. CALIBRATED RANDOM FOREST</th><tr>
+<tr><td bgcolor="green">79.80%</td><td bgcolor="green">79.71%</td><td bgcolor="green">80.00%</td><td bgcolor="green">79.82%</td><td bgcolor="green">1.640 sec</td></tr>
+<tr><th colspan="5">3. RANDOM FOREST WITH BEST PARAMETERS</th><tr>
+<tr><td bgcolor="red">77.13%</td><td bgcolor="red">77.39%</td><td bgcolor="red">77.87%</td><td bgcolor="red">76.99%</td><td bgcolor="red">49.499 sec</td></tr>
+</table>
+<p style="clear: both;">
+</body>
